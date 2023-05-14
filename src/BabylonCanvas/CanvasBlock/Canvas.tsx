@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
-import {useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import BasicScene from '../BasicScene'
 import s from './Canvas.module.css'
+
 
 const Canvas: React.FC = () => {
     const babylonCanvas = useRef(null)
