@@ -1,17 +1,16 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useRef} from 'react';
 import BasicScene from '../BasicScene'
-import s from "./Canvas.module.css"
+import s from './Canvas.module.css'
 
 const Canvas: React.FC = () => {
     const babylonCanvas = useRef(null)
+    const [basicScene] = useState<BasicScene>(new BasicScene())
+
 
     useEffect(() => {
         const canvas = babylonCanvas.current
-        if (canvas) {
-            new BasicScene(canvas)
-        }
-
+        basicScene.start(canvas!)
     })
 
     return (
