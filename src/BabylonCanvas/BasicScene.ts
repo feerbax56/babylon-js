@@ -1,5 +1,5 @@
 import * as BABYLON from '@babylonjs/core';
-import {CubeTexture, SceneLoader} from '@babylonjs/core';
+import {ArcRotateCamera, CubeTexture, SceneLoader, Vector3} from '@babylonjs/core';
 import "@babylonjs/loaders";
 
 export default class BasicScene {
@@ -22,14 +22,21 @@ export default class BasicScene {
 
     createScene(): BABYLON.Scene {
         const scene = new BABYLON.Scene(this.engin!)
-        const camera: BABYLON.UniversalCamera = new BABYLON.UniversalCamera(
+        const camera: BABYLON.ArcRotateCamera = new ArcRotateCamera(
             'camera',
             // координаты камеры, ось Z приближение
-            new BABYLON.Vector3(0, 1, -10),
+            -Math.PI / 2,
+            Math.PI / 2,
+            70,
+            Vector3.Zero(),
             scene
         );
+            // вращение камеры и скорость вращения
+        camera.useAutoRotationBehavior = true
+
+
         //привязываем управление камерой на мышь и клаву
-        camera.attachControl()
+        // camera.attachControl()
 
 
         //задний фон
