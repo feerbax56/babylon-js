@@ -8,10 +8,10 @@
 }
 button {
     position: relative;
-    padding: 20px 40px;
+    padding: 20px 20px;
     border: 3.5px solid #fff;
     background: none;
-    font-size: 22px;
+    font-size: 16px;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: #EBEBEB;
@@ -21,4 +21,9 @@ button {
 button:hover {
     background: #fff;
     color: #333;
+}
+
+button:active{
+    color: burlywood;
+    background: chocolate;
 }

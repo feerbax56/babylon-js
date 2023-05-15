@@ -8,6 +8,21 @@
     background-color: rgb(48, 213, 200, 0.3);
     margin: 0 auto;
     color: white;
-    font-size: 25px;
+    font-size: 22px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnText{
+    width: 170px;
+    height: 50px;
+    font-size: 16px;
+    margin: auto;
+}
+
+.textBlock{
+    width: 100%;
+    height: 70px;
+text-align: left;
 }

@@ -1,6 +1,6 @@
 import * as BABYLON from '@babylonjs/core';
 import {ArcRotateCamera, CubeTexture, SceneLoader, Vector3} from '@babylonjs/core';
-import "@babylonjs/loaders";
+import '@babylonjs/loaders';
 
 export default class BasicScene {
 
@@ -31,12 +31,12 @@ export default class BasicScene {
             Vector3.Zero(),
             scene
         );
-            // вращение камеры и скорость вращения
+        // вращение камеры и скорость вращения
         camera.useAutoRotationBehavior = true
-
-
+        //отключить контроль
+        scene.detachControl()
         //привязываем управление камерой на мышь и клаву
-        camera.attachControl()
+        // camera.attachControl()
 
 
         //задний фон
@@ -59,9 +59,9 @@ export default class BasicScene {
         // ball.position.y = 1
 
         const spaceship = SceneLoader.ImportMesh(
-            "",
-            "./model/",
-            "22.gltf"
+            '',
+            './model/',
+            '22.gltf'
         );
 
         // даем свет
