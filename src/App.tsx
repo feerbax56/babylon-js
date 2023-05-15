@@ -6,7 +6,7 @@ import TextBlock from "./TextBlock/TextBlock";
 function App() {
     return (
         <div className="App">
-            <button>start</button>
+            {/*<button>start</button>*/}
             <Canvas/>
             <TextBlock/>
         </div>
