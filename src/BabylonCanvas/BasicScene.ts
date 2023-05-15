@@ -36,7 +36,7 @@ export default class BasicScene {
 
 
         //привязываем управление камерой на мышь и клаву
-        // camera.attachControl()
+        camera.attachControl()
 
 
         //задний фон

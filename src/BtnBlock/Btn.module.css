@@ -1,0 +1,24 @@
+.btnBlock{
+    position: absolute;
+    top: 15px;
+    right: 200px;
+    height: 50px;
+    width: 50px;
+
+}
+button {
+    position: relative;
+    padding: 20px 40px;
+    border: 3.5px solid #fff;
+    background: none;
+    font-size: 22px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #EBEBEB;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+button:hover {
+    background: #fff;
+    color: #333;
+}
