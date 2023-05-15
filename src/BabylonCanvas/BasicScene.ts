@@ -1,5 +1,6 @@
 import * as BABYLON from '@babylonjs/core';
 import {CubeTexture, SceneLoader} from '@babylonjs/core';
+import "@babylonjs/loaders";
 
 export default class BasicScene {
 
@@ -14,6 +15,8 @@ export default class BasicScene {
         // рекурсивно рендерим сцену при обновлении сцены
         this.engin.runRenderLoop(() => {
             this.scene?.render()
+            // this.spaceship()
+
         })
     }
 
@@ -48,10 +51,11 @@ export default class BasicScene {
         // //приподнять шар
         // ball.position.y = 1
 
-        const spaceship = SceneLoader.ImportMesh('', './model/', 'UFO.glb', scene, () => {
-            console.log('1111')
-        })
-
+        const spaceship = SceneLoader.ImportMesh(
+            "",
+            "./model/",
+            "22.gltf"
+        );
 
         // даем свет
         const light: BABYLON.DirectionalLight = new BABYLON.DirectionalLight('light', new BABYLON.Vector3(1, -1, 0), scene)
