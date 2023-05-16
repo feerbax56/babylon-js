@@ -14,45 +14,44 @@ const TextBlock = () => {
         ]
     let coin = 0
 
-    const el = React.useRef(null);
+    // const el = React.useRef(null);
     const [activeText, setActiveText] = useState<string>(text[coin])
 
     const nextPage = () => {
-        if (coin < 5) {
-            setActiveText(text[coin + 1])
+            setActiveText(text[(coin + 1)])
             coin++
-            console.log(activeText)
             console.log(coin)
-        }
     }
     const previousPage = () => {
-        if (coin > 0) {
-            setActiveText(text[coin - 1])
+            setActiveText(text[(coin - 1)])
             coin--
-            console.log(activeText)
-        }
+            console.log(coin)
     }
 
-    React.useEffect(() => {
-        const typed = new Typed(el.current, {
-            strings: [activeText],
-            typeSpeed: 50,
-        });
-        return () => {
-            // Destroy Typed instance during cleanup to stop animation
-            typed.destroy();
-        };
-    }, text);
+    // React.useEffect(() => {
+    //     const typed = new Typed(el.current, {
+    //         strings: [activeText],
+    //         typeSpeed: 50,
+    //     });
+    //     return () => {
+    //         // Destroy Typed instance during cleanup to stop animation
+    //         typed.destroy();
+    //     };
+    // }, text);
 
 
     return (
         <div className={s.block}>
             <span className={s.textBlock}>
-                <span ref={el}/>
+                {/*<span ref={el}/>*/}
+                <div>
+                    {activeText}
+                </div>
+
             </span>
             <div>
-                <button className={s.btnText} onClick={previousPage}>назад</button>
-                <button className={s.btnText} onClick={nextPage}>дальше</button>
+                <button className={s.btnText} onClick={previousPage} disabled={coin === 0}>назад</button>
+                <button className={s.btnText} onClick={nextPage} disabled={coin === 4}>дальше</button>
             </div>
         </div>
     );
