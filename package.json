@@ -2,6 +2,7 @@
   "name": "babylon-js",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://feerbax56.github.io/babylon-js",
   "dependencies": {
     "@babylonjs/core": "^6.2.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -27,6 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
