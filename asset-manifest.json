@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/babylon-js/static/css/main.3985df43.css",
+    "main.js": "/babylon-js/static/js/main.900183b4.js",
+    "index.html": "/babylon-js/index.html",
+    "main.3985df43.css.map": "/babylon-js/static/css/main.3985df43.css.map",
+    "main.900183b4.js.map": "/babylon-js/static/js/main.900183b4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3985df43.css",
+    "static/js/main.900183b4.js"
+  ]
+}
