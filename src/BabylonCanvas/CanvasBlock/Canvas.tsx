@@ -1,7 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import BasicScene from '../BasicScene'
 import s from './Canvas.module.css'
-import TextBlock from "../../TextBlock/TextBlock";
 
 
 const Canvas: React.FC = () => {

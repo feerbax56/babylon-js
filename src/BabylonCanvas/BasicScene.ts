@@ -58,6 +58,7 @@ export default class BasicScene {
         // //приподнять шар
         // ball.position.y = 1
 
+        // eslint-disable-next-line
         const spaceship = SceneLoader.ImportMesh(
             '',
             './model/',
@@ -65,6 +66,7 @@ export default class BasicScene {
         );
 
         // даем свет
+        // eslint-disable-next-line
         const light: BABYLON.DirectionalLight = new BABYLON.DirectionalLight('light', new BABYLON.Vector3(1, -1, 0), scene)
 
         return scene;
