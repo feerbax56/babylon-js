@@ -27,9 +27,9 @@ const BtnBlock = () => {
             <button className={s.glowOnHover}
             // onClick={LoadCache}
             >
-                {/*<a href="https://speed.hetzner.de/1GB.bin">*/}
+                <a href="https://speed.hetzner.de/1GB.bin">
                     загрузка
-                {/*</a>*/}
+                </a>
             </button>
         </div>
     );
