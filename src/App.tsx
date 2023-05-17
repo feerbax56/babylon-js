@@ -7,7 +7,7 @@ import BtnBlock from './BtnBlock/BtnBlock';
 function App() {
     return (
         <div className="App">
-            <BtnBlock/>
+            {/*<BtnBlock/>*/}
             {/*<button>start</button>*/}
             <Canvas/>
             <TextBlock/>
