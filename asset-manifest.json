@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/babylon-js/static/css/main.3985df43.css",
-    "main.js": "/babylon-js/static/js/main.f590c738.js",
+    "main.css": "/babylon-js/static/css/main.1ebd32e0.css",
+    "main.js": "/babylon-js/static/js/main.45b04d0b.js",
     "index.html": "/babylon-js/index.html",
-    "main.3985df43.css.map": "/babylon-js/static/css/main.3985df43.css.map",
-    "main.f590c738.js.map": "/babylon-js/static/js/main.f590c738.js.map"
+    "main.1ebd32e0.css.map": "/babylon-js/static/css/main.1ebd32e0.css.map",
+    "main.45b04d0b.js.map": "/babylon-js/static/js/main.45b04d0b.js.map"
   },
   "entrypoints": [
-    "static/css/main.3985df43.css",
-    "static/js/main.f590c738.js"
+    "static/css/main.1ebd32e0.css",
+    "static/js/main.45b04d0b.js"
   ]
 }
