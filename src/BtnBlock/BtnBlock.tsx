@@ -1,30 +1,24 @@
 import React from 'react';
 import s from './Btn.module.css'
-// import axios from 'axios';
+import axios from 'axios';
 
 
-// const areaDataCache = {};
-// const postcode = 'filename=ooo-cab-war-for-galaxy-mobile-warforgalaxy-windows-402.zip'
-//
-// const getAreaData = async (postcode: any) => {
-//     // if cache doesn't contain data
-//     if (!areaDataCache[postcode]) {
-//         // load data and add it to cache
-//         const { data } = await axios.get(`https://api.zippopotam.us/GB/${postcode}`);
-//         areaDataCache[postcode] = data.places
-//     }
-//     // cached data
-//     return areaDataCache[postcode];
-// };
-
-
+const LoadCache = async () => {
+    let result = await axios.get(
+        `https://speed.hetzner.de/1GB.bin`,
+    )
+    if (result.status === 200 && result.data.length > 0) {
+        console.log(result)
+        // localStorage.setItem('cache', JSON.stringify(result.data))
+    }
+}
 
 
 const BtnBlock = () => {
 
     return (
         <div className={s.btnBlock}>
-            <button className={s.glowOnHover} >загрузка в кэш</button>
+            <button className={s.glowOnHover} onClick={LoadCache}>загрузка в кэш</button>
         </div>
     );
 };
