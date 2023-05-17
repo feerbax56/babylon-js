@@ -7,51 +7,43 @@ const TextBlock = () => {
     const text: string[] =
         [
             '1 Кстати, некоторые особенности внутренней политики обнародованы. Лишь представители современных социальных резервов представлены в исключительно положительном свете.',
-            '2 Безусловно, современная методология разработки предполагает независимые способы реализации дальнейших направлений развития. Приятно, граждане, наблюдать, как многие известные личности объявлены нарушающими общечеловеческие нормы этики и морали.',
-            '3 В целом, конечно, укрепление и развитие внутренней структуры требует анализа укрепления моральных ценностей. И нет сомнений, что реплицированные с зарубежных источников, современные исследования и по сей день остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.',
+            '2 Безусловно, современная методология разработки предполагает независимые способы реализации дальнейших направлений развития.',
+            '3 В целом, конечно, укрепление и развитие внутренней структуры требует анализа укрепления моральных ценностей.',
             '4 Равным образом, семантический разбор внешних противодействий является качественно новой ступенью распределения внутренних резервов и ресурсов.',
             '5 Следует отметить, что курс на социально-ориентированный национальный проект не даёт нам иного выбора, кроме определения форм воздействия.'
         ]
-    let coin = 0
-
-    // const el = React.useRef(null);
+    let [coin, setCoin] = useState(0)
     const [activeText, setActiveText] = useState<string>(text[coin])
-
-    const nextPage = () => {
-            setActiveText(text[(coin + 1)])
-            coin++
-            console.log(coin)
-    }
-    const previousPage = () => {
-            setActiveText(text[(coin - 1)])
-            coin--
-            console.log(coin)
+    const changeCoin = (arg: string) => {
+        if (arg === 'next' && coin < 4) {
+            setCoin(coin + 1)
+        } else if (arg === 'prev' && coin > 0) {
+            setCoin(coin - 1)
+        }
+        setActiveText(text[coin])
     }
 
-    // React.useEffect(() => {
-    //     const typed = new Typed(el.current, {
-    //         strings: [activeText],
-    //         typeSpeed: 50,
-    //     });
-    //     return () => {
-    //         // Destroy Typed instance during cleanup to stop animation
-    //         typed.destroy();
-    //     };
-    // }, text);
+    //эффект печантной машинки
+    const el = React.useRef(null);
+    React.useEffect(() => {
+        const typed = new Typed(el.current, {
+            strings: [activeText],
+            typeSpeed: 50,
+        });
+        return () => {
+            typed.destroy();
+        };
+    }, [activeText]);
 
 
     return (
         <div className={s.block}>
             <span className={s.textBlock}>
-                {/*<span ref={el}/>*/}
-                <div>
-                    {activeText}
-                </div>
-
+                <span ref={el}/>
             </span>
             <div>
-                <button className={s.btnText} onClick={previousPage} disabled={coin === 0}>назад</button>
-                <button className={s.btnText} onClick={nextPage} disabled={coin === 4}>дальше</button>
+                <button className={s.btnText} onClick={() => changeCoin('prev')}>назад</button>
+                <button className={s.btnText} onClick={() => changeCoin('next')}>дальше</button>
             </div>
         </div>
     );
